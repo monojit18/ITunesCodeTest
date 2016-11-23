@@ -20,6 +20,7 @@
 		8CCCDCC21DE551D60037F897 /* BaseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCDCBD1DE551D60037F897 /* BaseAdapter.m */; };
 		8CCCDCC31DE551D60037F897 /* BaseAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCDCBF1DE551D60037F897 /* BaseAppModel.m */; };
 		8CCCDCC41DE551D60037F897 /* BaseHttpDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCDCC11DE551D60037F897 /* BaseHttpDataService.m */; };
+		8CCCDCCB1DE5561E0037F897 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCDCC91DE5561E0037F897 /* Reachability.m */; };
 		A2C7691A1DE3E7E700CBDB29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C769191DE3E7E700CBDB29 /* main.m */; };
 		A2C7691D1DE3E7E700CBDB29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C7691C1DE3E7E700CBDB29 /* AppDelegate.m */; };
 		A2C769261DE3E7E700CBDB29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C769241DE3E7E700CBDB29 /* Main.storyboard */; };
@@ -64,6 +65,8 @@
 		8CCCDCBF1DE551D60037F897 /* BaseAppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAppModel.m; sourceTree = "<group>"; };
 		8CCCDCC01DE551D60037F897 /* BaseHttpDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHttpDataService.h; sourceTree = "<group>"; };
 		8CCCDCC11DE551D60037F897 /* BaseHttpDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHttpDataService.m; sourceTree = "<group>"; };
+		8CCCDCC81DE5561E0037F897 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8CCCDCC91DE5561E0037F897 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		A2C769151DE3E7E700CBDB29 /* ITunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C769191DE3E7E700CBDB29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2C7691B1DE3E7E700CBDB29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -168,6 +171,38 @@
 			path = BaseInterfaces;
 			sourceTree = "<group>";
 		};
+		8CCCDCC51DE5561E0037F897 /* Subsystems */ = {
+			isa = PBXGroup;
+			children = (
+				8CCCDCC61DE5561E0037F897 /* DB */,
+				8CCCDCC71DE5561E0037F897 /* Http */,
+			);
+			path = Subsystems;
+			sourceTree = "<group>";
+		};
+		8CCCDCC61DE5561E0037F897 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		8CCCDCC71DE5561E0037F897 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				8CCCDCC81DE5561E0037F897 /* Reachability.h */,
+				8CCCDCC91DE5561E0037F897 /* Reachability.m */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		8CCCDCCA1DE5561E0037F897 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		A2C7690C1DE3E7E700CBDB29 = {
 			isa = PBXGroup;
 			children = (
@@ -202,7 +237,9 @@
 				A2C769271DE3E7E700CBDB29 /* Assets.xcassets */,
 				A2C769291DE3E7E700CBDB29 /* LaunchScreen.storyboard */,
 				A2C7692C1DE3E7E700CBDB29 /* Info.plist */,
+				8CCCDCC51DE5561E0037F897 /* Subsystems */,
 				A2C769181DE3E7E700CBDB29 /* Supporting Files */,
+				8CCCDCCA1DE5561E0037F897 /* Utilities */,
 			);
 			path = ITunesSearch;
 			sourceTree = "<group>";
@@ -340,6 +377,7 @@
 				A2C7691D1DE3E7E700CBDB29 /* AppDelegate.m in Sources */,
 				8C758ADF1DE52AF4006BEA02 /* ITSDownloadService.m in Sources */,
 				A2C7691A1DE3E7E700CBDB29 /* main.m in Sources */,
+				8CCCDCCB1DE5561E0037F897 /* Reachability.m in Sources */,
 				8C758AC91DE47500006BEA02 /* ITSSearchService.m in Sources */,
 				8CCCDCC31DE551D60037F897 /* BaseAppModel.m in Sources */,
 				8C758AEF1DE54517006BEA02 /* DetailViewController.m in Sources */,

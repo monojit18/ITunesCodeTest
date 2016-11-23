@@ -33,9 +33,8 @@ const NSString* const kCellIdentifierString = @"MasterCell";
     
     [super viewDidLoad];
  
- 
-    UINavigationController* pc = [self.splitViewController.viewControllers lastObject];
-    self.detailViewController = (DetailViewController *)pc.topViewController;
+    UINavigationController* pNavigationController = [self.splitViewController.viewControllers lastObject];
+    self.detailViewController = (DetailViewController*)(pNavigationController.topViewController);
     
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
     self.searchBar.delegate = self;
@@ -136,6 +135,9 @@ const NSString* const kCellIdentifierString = @"MasterCell";
 {
     
     ITSSearchModel* pSearchModel = _pSearchListModel.searchModelsArray[indexPath.row];
+    if (!pSearchModel || !(self.detailViewController))
+        return;
+    
     [self.detailViewController setSearchModel:pSearchModel];
     self.detailViewController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
     self.detailViewController.navigationItem.leftItemsSupplementBackButton = YES;

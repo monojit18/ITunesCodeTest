@@ -10,15 +10,16 @@
 		8C758AC91DE47500006BEA02 /* ITSSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758AC81DE47500006BEA02 /* ITSSearchService.m */; };
 		8C758ACC1DE4752C006BEA02 /* ITSSearchAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758ACB1DE4752C006BEA02 /* ITSSearchAdapter.m */; };
 		8C758ACF1DE47571006BEA02 /* ITSSearchListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758ACE1DE47571006BEA02 /* ITSSearchListModel.m */; };
-		8C758AD31DE475C0006BEA02 /* BaseHttpDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758AD21DE475C0006BEA02 /* BaseHttpDataService.m */; };
-		8C758AD61DE479F3006BEA02 /* BaseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758AD51DE479F3006BEA02 /* BaseAdapter.m */; };
-		8C758AD91DE47A04006BEA02 /* BaseAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758AD81DE47A04006BEA02 /* BaseAppModel.m */; };
 		8C758ADF1DE52AF4006BEA02 /* ITSDownloadService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758ADE1DE52AF4006BEA02 /* ITSDownloadService.m */; };
 		8C758AE21DE52C27006BEA02 /* ITSDownloadAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758AE11DE52C27006BEA02 /* ITSDownloadAdapter.m */; };
 		8C758AE51DE53C26006BEA02 /* ITunesTestDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758AE41DE53C26006BEA02 /* ITunesTestDataService.m */; };
 		8C758AEE1DE54517006BEA02 /* MasterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758AE81DE54517006BEA02 /* MasterTableViewCell.m */; };
 		8C758AEF1DE54517006BEA02 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758AEB1DE54517006BEA02 /* DetailViewController.m */; };
 		8C758AF01DE54517006BEA02 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C758AED1DE54517006BEA02 /* MasterViewController.m */; };
+		8CCCDCBA1DE5518D0037F897 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCCDCB91DE5518D0037F897 /* SystemConfiguration.framework */; };
+		8CCCDCC21DE551D60037F897 /* BaseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCDCBD1DE551D60037F897 /* BaseAdapter.m */; };
+		8CCCDCC31DE551D60037F897 /* BaseAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCDCBF1DE551D60037F897 /* BaseAppModel.m */; };
+		8CCCDCC41DE551D60037F897 /* BaseHttpDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCDCC11DE551D60037F897 /* BaseHttpDataService.m */; };
 		A2C7691A1DE3E7E700CBDB29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C769191DE3E7E700CBDB29 /* main.m */; };
 		A2C7691D1DE3E7E700CBDB29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C7691C1DE3E7E700CBDB29 /* AppDelegate.m */; };
 		A2C769261DE3E7E700CBDB29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C769241DE3E7E700CBDB29 /* Main.storyboard */; };
@@ -44,12 +45,6 @@
 		8C758ACB1DE4752C006BEA02 /* ITSSearchAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSSearchAdapter.m; sourceTree = "<group>"; };
 		8C758ACD1DE47571006BEA02 /* ITSSearchListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSSearchListModel.h; sourceTree = "<group>"; };
 		8C758ACE1DE47571006BEA02 /* ITSSearchListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSSearchListModel.m; sourceTree = "<group>"; };
-		8C758AD11DE475C0006BEA02 /* BaseHttpDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHttpDataService.h; sourceTree = "<group>"; };
-		8C758AD21DE475C0006BEA02 /* BaseHttpDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHttpDataService.m; sourceTree = "<group>"; };
-		8C758AD41DE479F3006BEA02 /* BaseAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAdapter.h; sourceTree = "<group>"; };
-		8C758AD51DE479F3006BEA02 /* BaseAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAdapter.m; sourceTree = "<group>"; };
-		8C758AD71DE47A04006BEA02 /* BaseAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAppModel.h; sourceTree = "<group>"; };
-		8C758AD81DE47A04006BEA02 /* BaseAppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAppModel.m; sourceTree = "<group>"; };
 		8C758ADD1DE52AF4006BEA02 /* ITSDownloadService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSDownloadService.h; sourceTree = "<group>"; };
 		8C758ADE1DE52AF4006BEA02 /* ITSDownloadService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSDownloadService.m; sourceTree = "<group>"; };
 		8C758AE01DE52C27006BEA02 /* ITSDownloadAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSDownloadAdapter.h; sourceTree = "<group>"; };
@@ -62,6 +57,13 @@
 		8C758AEB1DE54517006BEA02 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		8C758AEC1DE54517006BEA02 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		8C758AED1DE54517006BEA02 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		8CCCDCB91DE5518D0037F897 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8CCCDCBC1DE551D60037F897 /* BaseAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAdapter.h; sourceTree = "<group>"; };
+		8CCCDCBD1DE551D60037F897 /* BaseAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAdapter.m; sourceTree = "<group>"; };
+		8CCCDCBE1DE551D60037F897 /* BaseAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAppModel.h; sourceTree = "<group>"; };
+		8CCCDCBF1DE551D60037F897 /* BaseAppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAppModel.m; sourceTree = "<group>"; };
+		8CCCDCC01DE551D60037F897 /* BaseHttpDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHttpDataService.h; sourceTree = "<group>"; };
+		8CCCDCC11DE551D60037F897 /* BaseHttpDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHttpDataService.m; sourceTree = "<group>"; };
 		A2C769151DE3E7E700CBDB29 /* ITunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C769191DE3E7E700CBDB29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2C7691B1DE3E7E700CBDB29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCCDCBA1DE5518D0037F897 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,19 +127,6 @@
 			path = DataServices;
 			sourceTree = "<group>";
 		};
-		8C758AD01DE47599006BEA02 /* Generics */ = {
-			isa = PBXGroup;
-			children = (
-				8C758AD11DE475C0006BEA02 /* BaseHttpDataService.h */,
-				8C758AD21DE475C0006BEA02 /* BaseHttpDataService.m */,
-				8C758AD41DE479F3006BEA02 /* BaseAdapter.h */,
-				8C758AD51DE479F3006BEA02 /* BaseAdapter.m */,
-				8C758AD71DE47A04006BEA02 /* BaseAppModel.h */,
-				8C758AD81DE47A04006BEA02 /* BaseAppModel.m */,
-			);
-			path = Generics;
-			sourceTree = "<group>";
-		};
 		8C758AE61DE54517006BEA02 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,12 +147,34 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		8CCCDCB81DE5518D0037F897 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CCCDCB91DE5518D0037F897 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CCCDCBB1DE551D60037F897 /* BaseInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				8CCCDCBC1DE551D60037F897 /* BaseAdapter.h */,
+				8CCCDCBD1DE551D60037F897 /* BaseAdapter.m */,
+				8CCCDCBE1DE551D60037F897 /* BaseAppModel.h */,
+				8CCCDCBF1DE551D60037F897 /* BaseAppModel.m */,
+				8CCCDCC01DE551D60037F897 /* BaseHttpDataService.h */,
+				8CCCDCC11DE551D60037F897 /* BaseHttpDataService.m */,
+			);
+			path = BaseInterfaces;
+			sourceTree = "<group>";
+		};
 		A2C7690C1DE3E7E700CBDB29 = {
 			isa = PBXGroup;
 			children = (
 				A2C769171DE3E7E700CBDB29 /* ITunesSearch */,
 				A2C769341DE3E7E700CBDB29 /* ITunesSearchTests */,
 				A2C769161DE3E7E700CBDB29 /* Products */,
+				8CCCDCB81DE5518D0037F897 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,8 +192,8 @@
 			children = (
 				8C758AC41DE47500006BEA02 /* Adapters */,
 				8C758AC51DE47500006BEA02 /* AppModels */,
+				8CCCDCBB1DE551D60037F897 /* BaseInterfaces */,
 				8C758AC61DE47500006BEA02 /* DataServices */,
-				8C758AD01DE47599006BEA02 /* Generics */,
 				8C758AE61DE54517006BEA02 /* TableCells */,
 				8C758AE91DE54517006BEA02 /* ViewControllers */,
 				A2C7691B1DE3E7E700CBDB29 /* AppDelegate.h */,
@@ -318,18 +330,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCCDCC41DE551D60037F897 /* BaseHttpDataService.m in Sources */,
 				8C758ACF1DE47571006BEA02 /* ITSSearchListModel.m in Sources */,
 				8C758AEE1DE54517006BEA02 /* MasterTableViewCell.m in Sources */,
 				8C758AF01DE54517006BEA02 /* MasterViewController.m in Sources */,
-				8C758AD31DE475C0006BEA02 /* BaseHttpDataService.m in Sources */,
+				8CCCDCC21DE551D60037F897 /* BaseAdapter.m in Sources */,
 				8C758AE21DE52C27006BEA02 /* ITSDownloadAdapter.m in Sources */,
-				8C758AD91DE47A04006BEA02 /* BaseAppModel.m in Sources */,
-				8C758AD61DE479F3006BEA02 /* BaseAdapter.m in Sources */,
 				8C758ACC1DE4752C006BEA02 /* ITSSearchAdapter.m in Sources */,
 				A2C7691D1DE3E7E700CBDB29 /* AppDelegate.m in Sources */,
 				8C758ADF1DE52AF4006BEA02 /* ITSDownloadService.m in Sources */,
 				A2C7691A1DE3E7E700CBDB29 /* main.m in Sources */,
 				8C758AC91DE47500006BEA02 /* ITSSearchService.m in Sources */,
+				8CCCDCC31DE551D60037F897 /* BaseAppModel.m in Sources */,
 				8C758AEF1DE54517006BEA02 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

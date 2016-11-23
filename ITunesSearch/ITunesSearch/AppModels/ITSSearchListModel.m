@@ -114,6 +114,10 @@
         __strong typeof(pWeakSelf) pStrongSelf = pWeakSelf;
         pStrongSelf.artWorkData = (NSData*)pResponse;
         
+        NSDictionary* pUserInfoDictionary = @{@"searchModel" : pStrongSelf};
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"OnRefresh" object:nil
+                                                          userInfo:pUserInfoDictionary];
+        
         
     }];
     

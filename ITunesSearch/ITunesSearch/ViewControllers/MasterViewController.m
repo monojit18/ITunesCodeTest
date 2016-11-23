@@ -22,9 +22,24 @@ const NSString* const kCellIdentifierString = @"MasterCell";
 
 @property(nonatomic, strong) UISearchBar* searchBar;
 
+-(void) refreshViewBindings:(ITSSearchModel*) pSearchModel;
+
 @end
 
 @implementation MasterViewController
+
+#pragma mark - Private Methods
+
+-(void) refreshViewBindings:(ITSSearchModel*) pSearchModel
+{
+    
+    NSUInteger index = [_pSearchListModel.searchModelsArray indexOfObject:pSearchModel];
+    NSIndexPath* pIndexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    
+    [self.tableView reloadRowsAtIndexPaths:@[pIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+    
+    
+}
 
 #pragma mark - View Callbacks
 
@@ -42,6 +57,8 @@ const NSString* const kCellIdentifierString = @"MasterCell";
     
     _pSearchListModel = [[ITSSearchListModel alloc] init];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnRefresh:) name:@"OnRefresh" object:nil];
+    
 }
 
 
@@ -58,6 +75,13 @@ const NSString* const kCellIdentifierString = @"MasterCell";
 {
     [super didReceiveMemoryWarning];
 
+}
+
+-(void) dealloc
+{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
 }
 
 #pragma mark - Segues
@@ -154,17 +178,30 @@ const NSString* const kCellIdentifierString = @"MasterCell";
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
+    __weak typeof(self) pWeakSelf = self;
     [_pSearchListModel search:pSearchBar.text withCallbackAsync:^(BaseAppModel *pAppModel, NSError *pError)
      {
         
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-         [self.tableView reloadData];
-         
+         [pWeakSelf.tableView reloadData];
          
      }];
     
-    
 }
 
+#pragma mark - Notification methods
+
+-(void) OnRefresh:(NSNotification*) pNotification
+{
+    
+    ITSSearchModel* pSearchModel = pNotification.userInfo[@"searchModel"];
+    if (!pSearchModel)
+        return;
+    
+    [self refreshViewBindings:pSearchModel];
+    
+    
+    
+}
 
 @end

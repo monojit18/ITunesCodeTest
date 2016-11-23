@@ -10,7 +10,10 @@
 
 @class BaseAppModel;
 typedef void(^AppModelCallback)(BaseAppModel* pAppModel, NSError* pError);
+typedef void(^BindingCallback)(BaseAppModel* pAppModel);
 
 @interface BaseAppModel : NSObject
+
+@property(nonatomic, copy) BindingCallback bindingCallback;
 
 @end

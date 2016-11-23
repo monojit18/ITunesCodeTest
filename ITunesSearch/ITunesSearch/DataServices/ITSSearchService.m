@@ -8,6 +8,7 @@
 
 #import "ITSSearchService.h"
 #import <Foundation/Foundation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
 
 const NSString* const kBaseURLString = @"http://itunes.apple.com/search?term=";
 
@@ -38,6 +39,8 @@ const NSString* const kBaseURLString = @"http://itunes.apple.com/search?term=";
     
     _pSearchTermString = [pSearchTermString copy];
     [self prepareHttpSession];
+    
+    
    
     return self;
     

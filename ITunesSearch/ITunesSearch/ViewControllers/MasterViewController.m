@@ -129,7 +129,7 @@ const NSString* const kCellIdentifierString = @"MasterCell";
     if (!_pSearchListModel || !(_pSearchListModel.searchModelsArray.count))
     {
         
-        cell.artWorkImageView.image = nil;
+        cell.artWorkImageView.hidden = YES;
         cell.trackNameLabel.text = @"No Data to display";
         cell.artistNameLabel.text = nil;
         
@@ -137,6 +137,7 @@ const NSString* const kCellIdentifierString = @"MasterCell";
         
     }
 
+    cell.artWorkImageView.hidden = NO;
     ITSSearchModel* pSearchModel = _pSearchListModel.searchModelsArray[indexPath.row];
     cell.trackNameLabel.text = pSearchModel.trackName;
     cell.artistNameLabel.text = pSearchModel.artistName;
@@ -199,9 +200,7 @@ const NSString* const kCellIdentifierString = @"MasterCell";
         return;
     
     [self refreshViewBindings:pSearchModel];
-    
-    
-    
+
 }
 
 @end

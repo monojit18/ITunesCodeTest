@@ -16,7 +16,14 @@
 
 - (void)awakeFromNib
 {
+    
     [super awakeFromNib];
+    
+    self.artWorkImageView.layer.cornerRadius = 5.0;
+    self.artWorkImageView.layer.borderWidth = 1.0;
+    self.artWorkImageView.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.artWorkImageView.layer.masksToBounds = YES;
+    self.artWorkImageView.hidden = YES;
 
 }
 

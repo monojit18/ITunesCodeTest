@@ -11,6 +11,8 @@
 #import "ITSSearchListModel.h"
 #import "MasterTableViewCell.h"
 
+const NSString* const kCellIdentifierString = @"MasterCell";
+
 @interface MasterViewController () <UISearchBarDelegate>
 {
     
@@ -24,7 +26,11 @@
 
 @implementation MasterViewController
 
-- (void)viewDidLoad {
+#pragma mark - View Callbacks
+
+- (void)viewDidLoad
+{
+    
     [super viewDidLoad];
  
  
@@ -35,22 +41,24 @@
     self.searchBar.delegate = self;
     self.tableView.tableHeaderView = self.searchBar;
     
-  // [self.tableView registerClass:[MasterTableViewCell class] forCellReuseIdentifier:@"MasterCell"];
-    
     _pSearchListModel = [[ITSSearchListModel alloc] init];
     
 }
 
 
-- (void)viewWillAppear:(BOOL)animated {
-    // self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
     [super viewWillAppear:animated];
+    
 }
 
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 #pragma mark - Segues
@@ -73,18 +81,38 @@
 
 #pragma mark - Table View
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return 1;
 }
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (!_pSearchListModel || !(_pSearchListModel.searchModelsArray))
+        return 1;
+    
     return _pSearchListModel.searchModelsArray.count;
+    
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MasterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MasterCell" forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    MasterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:(NSString*)kCellIdentifierString
+                                                                forIndexPath:indexPath];
+    
+    if (!_pSearchListModel || !(_pSearchListModel.searchModelsArray.count))
+    {
+        
+        cell.artWorkImageView.image = nil;
+        cell.trackNameLabel.text = @"No Data to display";
+        cell.artistNameLabel.text = nil;
+        
+        return cell;
+        
+    }
 
     ITSSearchModel* pSearchModel = _pSearchListModel.searchModelsArray[indexPath.row];
     cell.trackNameLabel.text = pSearchModel.trackName;
@@ -94,12 +122,14 @@
         cell.artWorkImageView.image = [UIImage imageWithData:pSearchModel.artWorkData];
     
     return cell;
+    
 }
 
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return NO;
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

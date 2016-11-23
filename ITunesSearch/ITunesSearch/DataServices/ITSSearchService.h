@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "BaseHttpDataService.h"
 
-
 @interface ITSSearchService : BaseHttpDataService
 
 -(id) initWithSearchTerm:(NSString*) pSearchTermString;

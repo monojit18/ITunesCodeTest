@@ -11,9 +11,7 @@
 @interface MasterTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *artWorkImageView;
-
 @property (weak, nonatomic) IBOutlet UILabel *trackNameLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
 
 @end

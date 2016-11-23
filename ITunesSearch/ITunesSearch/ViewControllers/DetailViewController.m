@@ -21,6 +21,8 @@
 
 @implementation DetailViewController
 
+#pragma mark - Private Methods
+
 -(void) prepareDetailsView
 {
     
@@ -36,15 +38,11 @@
     
 }
 
-- (void)configureView {
-    
-}
+#pragma mark - View Callbacks
 
-
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -56,9 +54,12 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
+    
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.searchModel = nil;
+    
 }
 
 @end

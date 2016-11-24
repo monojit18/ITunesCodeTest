@@ -144,6 +144,8 @@ const NSString* const kCellIdentifierString = @"MasterCell";
     
     if (pSearchModel.artWorkData)
         cell.artWorkImageView.image = [UIImage imageWithData:pSearchModel.artWorkData];
+    else
+        [pSearchModel downloadImageFromURL:pSearchModel.artworkUrl];
     
     return cell;
     

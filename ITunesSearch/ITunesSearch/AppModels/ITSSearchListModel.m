@@ -47,8 +47,6 @@
         
         [pSearchResultsArrayM addObject:pSearchResult];
         
-        [pSearchResult downloadImageFromURL:pSearchResult.artworkUrl];
-        
     }
     
     self.searchModelsArray = [[NSArray alloc] initWithArray:pSearchResultsArrayM];

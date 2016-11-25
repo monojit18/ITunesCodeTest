@@ -89,16 +89,16 @@ const NSString* const kCellIdentifierString = @"MasterCell";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-//    if ([[segue identifier] isEqualToString:@"showDetail"])
-//    {
-//        
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        ITSSearchModel* pSearchModel = _pSearchListModel.searchModelsArray[indexPath.row];
-//        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-//        [controller setSearchModel:pSearchModel];
-//        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-//        controller.navigationItem.leftItemsSupplementBackButton = YES;
-//    }
+    if ([[segue identifier] isEqualToString:@"showDetail"])
+    {
+       
+       NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+       ITSSearchModel* pSearchModel = _pSearchListModel.searchModelsArray[indexPath.row];
+       DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
+       [controller setSearchModel:pSearchModel];
+       controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+       controller.navigationItem.leftItemsSupplementBackButton = YES;
+   }
 }
 
 
@@ -158,23 +158,21 @@ const NSString* const kCellIdentifierString = @"MasterCell";
     return NO;
 }
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    ITSSearchModel* pSearchModel = _pSearchListModel.searchModelsArray[indexPath.row];
-    if (!pSearchModel || !(self.detailViewController))
-        return;
-    
-    [self.detailViewController setSearchModel:pSearchModel];
-    self.detailViewController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-    self.detailViewController.navigationItem.leftItemsSupplementBackButton = YES;
-    
-    [self.navigationController pushViewController:self.detailViewController animated:YES];
-    
-}
-
 
 #pragma mark - SearchBar delegate methods
+
+- (void)searchBar:(UISearchBar *) pSearchBar textDidChange:(NSString *) pSearchText
+{
+    
+    if (_pSearchListModel.searchModelsArray)
+    {
+        
+        _pSearchListModel.searchModelsArray = nil;
+        [self.tableView reloadData];
+        
+    }
+    
+}
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *) pSearchBar
 {

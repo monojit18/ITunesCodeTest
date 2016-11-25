@@ -132,7 +132,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3LH-sN-L1L" id="lwf-8o-kew">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R17-sh-PNR">
@@ -192,6 +192,7 @@
                                     <outlet property="artWorkImageView" destination="EWe-ao-EjX" id="UP1-4w-hDg"/>
                                     <outlet property="artistNameLabel" destination="6bi-TS-Jjy" id="p3M-gH-dO6"/>
                                     <outlet property="trackNameLabel" destination="73Z-l7-0i5" id="dHn-cT-JaB"/>
+                                    <segue destination="amc-4n-MkH" kind="showDetail" identifier="showDetail" id="obV-Sb-BfK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -226,4 +227,7 @@
             <point key="canvasLocation" x="106" y="-412"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="obV-Sb-BfK"/>
+    </inferredMetricsTieBreakers>
 </document>
